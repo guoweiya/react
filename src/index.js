@@ -1,29 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// function greeting(name) {
-//   if (name) {
-//     return <h1>Hello, { name }!</h1>
-//   }
-//   return <h1>Hello, Stranger.</h1>
-// }
-// let root = greeting('')
+class CanvasTree extends React.Component {
+	render() {
+	  return <canvas id="canvas" width="512" height="256"></canvas>
+	}
 
-// let names = ['张三', '李四', '王五']
-// let elements = []
-// for (let i = 0; i < names.length; i++) {
-//   elements.push(<li>{ names[i] }</li>)
-// }
-
-function tick() {
-  const element = (
-    <div>
-      { new Date().toLocaleDateString() }
-    </div>
-  )
-}
+	componentDidMount() {
+	    let canvasDom =	document.getElementById('canvas');
+		console.log(canvasDom,'componentDidMound');
+	}
+  }
 
 ReactDOM.render(
-  tick,
+  <CanvasTree />,
   document.getElementById('root')
 );
